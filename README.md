@@ -38,10 +38,14 @@
 - [x] Введение в линейную алгебру
 
 ## 2. Machine Learning
-### 2.1. Библиотеки DS
-### 2.2. ML in Business
-### 2.3. Rec Systems
-### 2.4. Megafon project
+### 2.1. Python libraries for Data Science
+Практические задания по курсу "Библиотеки Python для Data Science: Numpy, Matplotlib, Scikit-learn".
+### 2.2. Machine Learning in business
+Практические задания по курсу "Машинное обучение в бизнесе".
+### 2.3. Recommender systems
+Практические задания по курсу "Рекомендательные системы".
+### 2.4. Megafon
+Курсовой проект-соревнование от компании "МегаФон".
 
 ## 3. Neural Networks
 ### 3.1. 
