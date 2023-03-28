@@ -38,13 +38,15 @@
 - [x] Введение в линейную алгебру
 
 ## 2. Machine Learning
-### 2.1. Python libraries for Data Science
+### 2.1. Data analysis algorithms
+Практические задания по курсу "Алгоритмы анализа данных"
+### 2.2. Python libraries for Data Science
 Практические задания по курсу "Библиотеки Python для Data Science: Numpy, Matplotlib, Scikit-learn".
-### 2.2. Machine Learning in business
+### 2.3. Machine Learning in business
 Практические задания по курсу "Машинное обучение в бизнесе".
-### 2.3. Recommender systems
+### 2.4. Recommender systems
 Практические задания по курсу "Рекомендательные системы".
-### 2.4. Megafon
+### 2.5. Megafon
 Курсовой проект-соревнование от компании "МегаФон".
 
 ## 3. Neural Networks
