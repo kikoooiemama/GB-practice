@@ -1,0 +1,79 @@
+/*
+ * Домашнее задание к занятию (видеоуроку) №11.
+ */
+
+/*
+ * Практическое задание по теме “NoSQL”
+ */
+
+/* 
+ * Таск 1. 
+ * В базе данных Redis подберите коллекцию для подсчета посещений с определенных IP-адресов.
+ */
+ 
+-- для подсчета посещений с определенных IP-адресов решил использовать HASH. При условии что ключом каждой пары будет ip-адресс, а значением будет меняющиееся количество посещений.
+
+-- создаем коллекцию.
+HMSET stored_ip '192.168.70.100' 0 '192.168.70.101' 0 '192.168.70.102' 12 '192.168.70.103' 4
+
+-- просмотр
+HGETALL stored_ip
+
+-- тип коллекции
+TYPE stored_ip
+
+-- допустим к нас посетил новый посетитель
+HSET stored_ip '192.168.70.104' 1
+
+-- посетитель с ip '192.168.70.101' зашел 2 раза
+HINCRBY stored_ip '192.168.70.101' 2
+
+-- кол-во адресов в коллекции
+HLEN stored_ip
+
+
+/* 
+ * Таск 2. 
+ * При помощи базы данных Redis решите задачу поиска имени пользователя по электронному адресу и наоборот,
+ * поиск электронного адреса пользователя по его имени.
+ */
+ 
+ -- поиск можно проводить только по ключу, поэтому самый простой вариант:
+ 
+SET name my_emeail@domain.com
+SET my_email@domain.com name
+
+GET name
+GET my_email@domain.com
+
+-- можно из через HASH, но это уже будет не так быстро
+
+HSET names_to_emails kolya koo@bar.com misha moo@bar.com
+HSET emails_to_names koo@bar.com kolya moo@bar.com misha
+
+HGETALL names_to_emails
+HGETALL emails_to_names
+
+HGET names_to_emails misha 
+HGET emails_to_names koo@bar.com 
+
+
+/* 
+ * Таск 3. 
+ * Организуйте хранение категорий и товарных позиций учебной базы данных shop в СУБД MongoDB.
+ */
+
+use products
+db.products.insert({name: "Intel Core i3-8100", description: "Процессор для настольных персональных компьютеров, основанных на платформе Intel.", price: "7890.00", catalog_id: "Процессоры", created_at: new Date(), updated_at: new Date()})
+db.products.insertMany([
+	{name: "Intel Core i5-7400", description: "Процессор для настольных персональных компьютеров, основанных на платформе Intel.", price: "12700.00", catalog_id: "Процессоры", created_at: new Date(), updated_at: new Date()},
+	{name: "AMD FX-8320E", description: "Процессор для настольных персональных компьютеров, основанных на платформе AMD.", price: "4780.00", catalog_id: "Процессоры", created_at: new Date(), updated_at: new Date()},
+	{name: "AMD FX-8320", description: "Процессор для настольных персональных компьютеров, основанных на платформе AMD.", price: "7120.00", catalog_id: "Процессоры", created_at: new Date(), updated_at: new Date()},
+	{name: "ASUS ROG MAXIMUS X HERO", description: "Материнская плата ASUS ROG MAXIMUS X HERO, Z370, Socket 1151-V2, DDR4, ATX", price: "19310.00", catalog_id: "Материнские платы", created_at: new Date(), updated_at: new Date()},
+	{name: "Gigabyte H310M S2H", description: "Материнская плата Gigabyte H310M S2H, H310, Socket 1151-V2, DDR4, mATX", price: "4790.00", catalog_id: "Материнские платы", created_at: new Date(), updated_at: new Date()},
+	{name: "MSI B250M GAMING PRO", description: "Материнская плата MSI B250M GAMING PRO, B250, Socket 1151, DDR4, mATX", price: "5060.00", catalog_id: "Материнские платы", created_at: new Date(), updated_at: new Date()}])
+
+use catalogs
+db.catalogs.insertMany([{name: "Процессоры"}, {name: "Материнские платы"}, {name: "Видеокарты"}, {name: "Жесткие диски"}, {name: "Оперативная память"}])
+db.catalogs.find()
+

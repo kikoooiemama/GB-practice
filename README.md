@@ -1,4 +1,5 @@
 # GB-practice
+Репозиторий всех практических заданий, решенных во время обучения по направлению Data Science.
 ## 1. Mathematics
 ### 1.1 Mathematical analysis
 * Теория множеств. Математическая логика
@@ -48,8 +49,8 @@
 ### 3.3. 
 
 ## 4.Others
-
-### 4.1. HTML/CSS
-### 4.2. SQL
-### 4.3. Python basics
-### 4.4. Python datamaining
+### 4.1. SQL
+Практические задания по курсу "Основы реляционных баз данных. SQL"
+### 4.2. Python basics
+Практические задания по курсу "Основы языка Python".
+### 4.3. Python datamaining
