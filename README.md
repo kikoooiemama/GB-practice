@@ -49,7 +49,7 @@
 ### 2.5. Megafon
 Курсовой проект-соревнование от компании "МегаФон".
 
-Part 1. Prediction of the probability of connection of the service by the subscriber.
+Part 1. Prediction of the probability of connection of the service by the subscriber. <br>
 Part 2. Formation of individual offers and maximization of revenue.
 
 Data: dataset of subscribers' responses to certain products and subscribers' consumption profile.
