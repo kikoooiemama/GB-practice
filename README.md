@@ -59,5 +59,7 @@ Data: dataset of subscribers' responses to certain products and subscribers' con
 Практические задания по курсу "Основы реляционных баз данных. SQL".
 ### 4.2. Python basics
 Практические задания по курсу "Основы языка Python".
-### 4.3. Methods of collecting and processing data from the Internet
+### 4.3. Algorithms and Data Structures in Python
+Практические задания по курсу "Алгоритмы и структуры данных на Python".
+### 4.4. Methods of collecting and processing data from the Internet
 Практические задания по курсу "Методы сбора и обработки данных из сети Интернет".
