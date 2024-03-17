@@ -74,6 +74,20 @@ Data: dataset of subscribers' responses to certain products and subscribers' con
 * GAN
 * Transformer
 ### 3.3. NLP
+* Предобработка текста
+* Создание признакового пространства
+* Embedding 
+* Тематическое моделирование. EM-алгоритм
+* Part-of-Speech разметка, NER, извлечение отношений
+* Классификация текста. Анализ тональности текста
+* Сверточные нейронные сети для анализа текста
+* RNN. LSTM
+* Языковое моделирование
+* Модель seq2seq и механизм внимания 
+* Модель Transformer-1
+* Модель Transformer-2
+* Модель BERT и GPT
+* Transfer learning
 
 ## 4.Others
 ### 4.1. SQL
