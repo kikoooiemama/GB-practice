@@ -61,8 +61,19 @@ Data: dataset of subscribers' responses to certain products and subscribers' con
 * Сегментация
 * Детекция
 * GAN 
-### 3.2. 
-### 3.3. 
+### 3.2. Pytorch 
+Практические задания по курсу "Pytorch".
+
+* Тензоры, автодифференцирование
+* Feed-forward нейронные сети
+* Dataloader, Dataset
+* CNN
+* Сегментация
+* Эмбединги
+* RNN 
+* GAN
+* Transformer
+### 3.3. NLP
 
 ## 4.Others
 ### 4.1. SQL
